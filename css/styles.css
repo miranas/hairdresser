@@ -1,6 +1,17 @@
-.row{
-    margin:20px;
-    border-top:10px;
-    height: 20px;
-    font-size:20px;
+
+#naroci{
+    text-align: center;
+    padding-bottom:60px;
+}
+
+body{
+    font-family:Comic sans MS;
+}
+
+#lumpek{
+    height:89px
+}
+
+.tnt{
+    margin-bottom:10px;
 }
