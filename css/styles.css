@@ -7,6 +7,12 @@
 
 body{
     font-family:Comic sans MS;
+    margin-top:30px;
 }
 
 
+.nav{
+    height:50px;
+    margin-bottom:-30px
+    
+}
