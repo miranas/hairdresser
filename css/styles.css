@@ -10,16 +10,28 @@ body{
 }
 
 .row{
-    padding-left:10px;
+    padding-left:0px;
     background-color:bisque;
-    padding-right:20px;
+    padding-right:0px;
 }
 
 
 .navbar-brand{
     font-size:35px;
+    padding-left:0px;
 }
 
 .nav{
-    font-size:20px;
+    font-size:22px;
+    padding-left:0px;
+}
+
+.col-md-7{
+    padding-left:0px;
+    
+
+}
+
+#tampon{
+    height: 200px;
 }
