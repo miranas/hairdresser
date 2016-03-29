@@ -19,6 +19,8 @@ body{
 .navbar-brand{
     font-size:35px;
     padding-left:0px;
+    
+        
 }
 
 .nav{
@@ -32,6 +34,11 @@ body{
 
 }
 
-#tampon{
-    height: 200px;
+.tampon{
+    height: 60px;
+}
+
+.slikce{
+    height: 300px;
+    width:300px;
 }
