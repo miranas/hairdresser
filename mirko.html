@@ -19,6 +19,9 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.easing.min.js"></script>
         <script src="js/scrolling-nav.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="javascript/smoothscroll.js"></script> 
+        
         
         <!--coda za carousel(vrtiljak) za slike -->
         <style>
@@ -26,7 +29,7 @@
         .carousel-inner > .item > a > img {
                 width: 65%;
                 margin: auto;
-                height:595px;
+                height:px;
             }
         .product .img-responsive {
             margin: 0 auto;
@@ -35,12 +38,13 @@
         </style>
     </head>   
     
-    <body>
+    <body data-spy="scroll" data-target=".navbar" data-offset="30"><!--scrollspy nastavitve-->
+    
      
-      <nav class="navbar navbar-fixed-top "> 
-       
+      <nav class="navbar navbar-fixed-top">        
            
             <div class="col-md-3"><!--prvi div navbara-->
+               
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#">Mirko frizer</a>
                 </div>
@@ -48,10 +52,11 @@
                
                 
             <div class="col-md-7"><!--drugi div navbara-->
+            
              <ul class="nav navbar-nav">
-                 <li class="active"><a href=#>Kaj nudimo</a></li>
-                 <li><a href=#>Naroči se</a></li>
-                 <li><a href=#>Pogosta vprašanja</a></li>
+                 <li><a href="#ponudba" id="down1" class="down">Kaj nudimo</a></li>
+                 <li><a href="#narocilo" id="down2" class="down">Naroči se</a></li>
+                 <li><a href="#faq" id="down3" class="down">Pogosta vprašanja</a></li>
                  <li><a href=#>Kontakt</a></li>
                  <li><a href=#>O nas</a></li>                 
              </ul>
@@ -59,6 +64,7 @@
 
               
              <div class = "col-md-2"><!--tretji div navbarja -->
+               
                 <form class= "navbar-form navbar-right" role="search">
                     <div class ="input-group">
                         <input type ="text" class ="form-control" placeholder="poišči">
@@ -66,13 +72,11 @@
                     </div>
                 </form>
              </div>
-           
-              
-                      
         </nav>
         
+    
        <div class ="container-fluid">    
-       <div class = "row">      
+       <div class = "row">  
          
        
        <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -108,15 +112,32 @@
       </a>
             
      </div><!--konec carousel -->
-        
-                   
-    </div>
-    
+    </div><!--konec row-->
     </div><!--konec containerja -->
     
      
     
-    <div id = "ponudba"><!--začetek sekcije -->
+    <section id = "ponudba"><!--začetek sekcije -->
+               
+                  <script><!--smooth scrool funkcija-->
+                    // Document ready shorthand statement
+                    $(function() {
+                      // Select link by id and add click event
+                      $('#down1').click(function() {
+
+                        // Animate Scroll to #bottom
+                        $('html,body').animate({
+                          scrollTop: $("#ponudba").offset().top }, // Tell it to scroll to the top #bottom
+                          '1000' // How long scroll will take in milliseconds
+                        );
+
+                        // Prevent default behavior of link
+                        return false;
+                      });
+                    });
+                  </script>
+    
+    
      <div class="row">   <br><br> <!--začetek row -->
       <div class = "container"><!--začetek caontainer-->
                             
@@ -146,22 +167,41 @@
               </div>
               
         
-      </div><!--konec containerja-->
-    </div><!--konec row-->    
-    </div><!--konec sekcije-->
+       </div><!--konec containerja-->
+      </div><!--konec row-->    
+    </section><!--konec sekcije-->
     
     
     
-    <div id = "narocilo"><!--začetek sekcije -->
-    <div class="row"><!--začetek row -->
-        <div class="container">
+    <section id = "narocilo"><!--začetek sekcije -->
+     
+                     <script> <!--smooth scrool funkcija-->
+                    // Document ready shorthand statement
+                    $(function() {
+                      // Select link by id and add click event
+                      $('#down2').click(function() {
+
+                        // Animate Scroll to #bottom
+                        $('html,body').animate({
+                          scrollTop: $("#narocilo").offset().top }, // Tell it to scroll to the top #bottom
+                          '1000' // How long scroll will take in milliseconds
+                        );
+
+                        // Prevent default behavior of link
+                        return false;
+                      });
+                    });
+                  </script>
+    
+      <div class="row"><!--začetek row -->
+        <div class="container"><!--začetek container-->
         
         <div class="tampon"></div>
         <div class="tampon"></div>
-        <h1 id= "naroci">Naroči se</h1>
         
+        <h1 id= "naroci">Naroči se</h1><!--naslov strani-->
+                   
             
-             
         <div class="col-md-6 form-group"><!--leva polovica strani -->
                  
           <div class="col-md-offset-2 col-md-9" style="margin-bottom:10px;">
@@ -246,58 +286,82 @@
        
       </div><!--konec row-->
       </div><!--konec container-->  
-    </div><!--konec sekcije-->
+    </section><!--konec sekcije-->
  
     
- <div id ="faq"><!--začetek sekcije --> 
- <div class ="row"><!--začetek row-->   
- <div class="container-fluid"><!--začetek container -->
- 
- <div class="tampon"></div>
- <div class="tampon"></div>
- 
- <h1 id="naroci">FAQ (pogosta vprašanja)</h1>
- 
  
     
- <div class ="col-md-offset-2 col-md-8" style="width:900px;">       
+    <section id ="faq"><!--začetek sekcije --> 
+    
+                    <script><!--smooth scrool funkcija-->
+                    // Document ready shorthand statement
+                    $(function() {
+                      // Select link by id and add click event
+                      $('#down3').click(function() {
 
-        
-        
-  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        // Animate Scroll to #bottom
+                        $('html,body').animate({
+                          scrollTop: $("#faq").offset().top }, // Tell it to scroll to the top #bottom
+                          '1000' // How long scroll will take in milliseconds
+                        );
+
+                        // Prevent default behavior of link
+                        return false;
+                      });
+                    });
+                    </script>
+    
+     <div class ="row"><!--začetek row-->   
+         <div class="container-fluid"><!--začetek container -->
+ 
+         <div class="tampon"></div>
+         <div class="tampon"></div>
+ 
+         
+         <h1 id="naroci">FAQ (pogosta vprašanja)</h1>
   
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingOne">
-      <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Kakšen je salon in ekipa?
-        </a>
-      </h4>
-    </div>
-    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-      <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
+    
+         <div class ="col-md-offset-2 col-md-8" style="width:900px;">       
+                 
+         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+         
+  
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Kakšen je salon in ekipa?
+                </a>
+              </h4>
+            </div>
+            
+            
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+              <div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+        </div>
+       </div>
   
   
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Ali sprejemate hišne ljubljenčke?
-        </a>
-      </h4>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Ali sprejemate hišne ljubljenčke?
+            </a>
+          </h4>
+        </div>
+    
+     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+     </div>
     </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
+    
   
-  <div class="panel panel-default">
+   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingThree">
       <h4 class="panel-title">
         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -311,16 +375,20 @@
       </div>
     </div>
   </div>
-</div>
-</div>
+</div><!--konec panel-group-->
+</div><!--konec col-md-->
+
+
 <div class="tampon"></div>
 <div class="tampon"></div>
-</div>
-</div>
-</div> 
+
+</div><!--konec container-->
+</div><!--konec row-->
+</section> 
      
      
-      
+  
+    
       
       
        
