@@ -20,22 +20,20 @@
         <script src="js/jquery.easing.min.js"></script>
         <script src="js/scrolling-nav.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-        <script type="text/javascript" src="javascript/smoothscroll.js"></script> 
+        
         
         
         <!--coda za carousel(vrtiljak) za slike -->
         <style>
         .carousel-inner > .item > img,
         .carousel-inner > .item > a > img {
-                width: 65%;
-                margin: auto;
-                height:px;
+                width:65%;
+                margin:auto;
+                
             }
-        .product .img-responsive {
-            margin: 0 auto;
-        }    
         
         </style>
+        
     </head>   
     
     <body data-spy="scroll" data-target=".navbar" data-offset="30"><!--scrollspy nastavitve-->
@@ -57,7 +55,7 @@
                  <li><a href="#ponudba" id="down1" class="down">Kaj nudimo</a></li>
                  <li><a href="#narocilo" id="down2" class="down">Naroči se</a></li>
                  <li><a href="#faq" id="down3" class="down">Pogosta vprašanja</a></li>
-                 <li><a href=#>Kontakt</a></li>
+                 <li><a href="#kontakt" id="down4" class="down">Kontakt</a></li>
                  <li><a href=#>O nas</a></li>                 
              </ul>
             </div>       
@@ -84,9 +82,12 @@
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
           </ol>
           
        <div class="carousel-inner" role="listbox">
+            
             <div class="item active">
               <img src="http://www.hairathomebyhayley.co.uk/images/bgPic1.jpg" class="img-responsive">
             </div>
@@ -97,6 +98,14 @@
             
             <div class="item">
               <img src="http://oblixcare.com/media/catalog/category/9_HAIR_CARE.jpg" class="img-responsive" >
+            </div>
+            
+            <div class="item">
+              <img src="slike/crna2.jpg" class="img-responsive" >
+            </div>
+            
+            <div class="item">
+              <img src="slike/crna3.jpg" class="img-responsive" >
             </div>
       </div>
       
@@ -361,35 +370,95 @@
     </div>
     
   
-   <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Imate kakšne nagrade s tekmovanj?
-        </a>
-      </h4>
-    </div>
-    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-      <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+       <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Imate kakšne nagrade s tekmovanj?
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div><!--konec panel-group-->
-</div><!--konec col-md-->
+    </div><!--konec panel-group-->
+        <div class="tampon"></div>
+        <div class="tampon"></div>
+   </div><!--konec col-md-->
 
 
-<div class="tampon"></div>
-<div class="tampon"></div>
+       
 
-</div><!--konec container-->
-</div><!--konec row-->
-</section> 
-     
-     
+    </div><!--konec container-->
+   </div><!--konec row-->
+  </section><!--konec sekcije faq -->
   
-<!--olemajole-->    
-      
+  
+   
+   <section id ="kontakt">
+    
+                <script><!--smooth scrool funkcija-->
+                    // Document ready shorthand statement
+                    $(function() {
+                      // Select link by id and add click event
+                      $('#down4').click(function() {
+
+                        // Animate Scroll to #bottom
+                        $('html,body').animate({
+                          scrollTop: $("#kontakt").offset().top }, // Tell it to scroll to the top #bottom
+                          '1000' // How long scroll will take in milliseconds
+                        );
+
+                        // Prevent default behavior of link
+                        return false;
+                      });
+                    });
+                </script>
+     
+       
+       <div class ="container-fluid">
+        <div class="row" style="background-color:white">
+         
+          <div class ="col-md-3 col-md-offset-1">
+             
+             <div class="tampon"></div>
+             <div class="tampon"></div>
+             <div class="tampon"></div>
+       
+             <h2>Kontakt:</h2>
+             <p>Mirko Frizer<br>Obrito nabrežje 7 <br>100 Ljubljana</p>
+             <p><a href="mailto:your-email@your-domain.com">frizeraj_mirko@šišanje.com</a></p>
+             <i class="glyphicon glyphicon-phone-alt"> 123-456-789</i>
+                   
+            <div class="tampon"></div>
+            <div class="tampon"></div>
+            <div class="tampon"></div>
+            <div class="tampon"></div>
+                    
+              
+          </div>
+          
+          <div class="col-md-4">
+              
+          </div>
+          
+          <div class="col-md-4">
+              
+          </div>
+          
+                         
+         
+            
+        </div><!--konec row --> 
+              
+      </div><!--konec container -->
+  </section><!--konec section contact -->
+   
+                
+              
       
        
   </body>

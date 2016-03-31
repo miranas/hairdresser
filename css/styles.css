@@ -41,3 +41,9 @@ body{
     height: 300px;
     width:300px;
 }
+
+.carousel{            /*carousel ne skače gor in dol zaradi različne višine slik */
+    max-height:725px;
+    min-height:725px;
+}
+
