@@ -29,7 +29,6 @@
         .carousel-inner > .item > a > img {
                 width:65%;
                 margin:auto;
-                
             }
         
         </style>
@@ -38,8 +37,8 @@
     
     <body data-spy="scroll" data-target=".navbar" data-offset="30"><!--scrollspy nastavitve-->
     
-     
-      <nav class="navbar navbar-fixed-top">        
+    
+    <nav class="navbar navbar-fixed-top"> <!--začetek navigacije-->       
            
             <div class="col-md-3"><!--prvi div navbara-->
                
@@ -56,7 +55,7 @@
                  <li><a href="#narocilo" id="down2" class="down">Naroči se</a></li>
                  <li><a href="#faq" id="down3" class="down">Pogosta vprašanja</a></li>
                  <li><a href="#kontakt" id="down4" class="down">Kontakt</a></li>
-                 <li><a href=#>O nas</a></li>                 
+                 <li><a href="#mojModal" role="button" data-toggle="modal">O nas</a></li>                 
              </ul>
             </div>       
 
@@ -387,10 +386,12 @@
     </div><!--konec panel-group-->
         <div class="tampon"></div>
         <div class="tampon"></div>
+        <div class="tampon"></div>
+        <div class="tampon"></div>
+        <div class="tampon"></div>
+        <div class="tampon"></div>
    </div><!--konec col-md-->
-
-
-       
+               
 
     </div><!--konec container-->
    </div><!--konec row-->
@@ -424,8 +425,7 @@
          
           <div class ="col-md-3 col-md-offset-1">
              
-             <div class="tampon"></div>
-             <div class="tampon"></div>
+            
              <div class="tampon"></div>
        
              <h2>Kontakt:</h2>
@@ -438,28 +438,57 @@
             <div class="tampon"></div>
             <div class="tampon"></div>
                     
-              
           </div>
           
           <div class="col-md-4">
-              
+             <!--prostor za logo-->              
           </div>
           
           <div class="col-md-4">
-              
+             <!--prostor za navigacijo -->
           </div>
           
-                         
-         
-            
+                    
         </div><!--konec row --> 
-              
       </div><!--konec container -->
-  </section><!--konec section contact -->
+   </section><!--konec section contact -->
    
-                
-              
-      
+                   
+   <!--modal-->
+     
+      <div class="modal fade" id="mojModal" role="dialog" ><!--na prvem mestu mora bit "modal fade"-->
+          <div class="modal-dialog"><!--nastavi širino in margine modala-->
+              <div class="modal-content"><!--nastavi background-color in border modala-->
+                 
+                  <div class ="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button><!--križ-->
+                      <h2 class="modal-title">O nas</h2>
+                  </div><!--konec headerja modala-->
+                  
+                  <div class="modal-body">
+                       <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut lectus pulvinar, dignissim ex vitae, placerat odio. Quisque erat risus, aliquam non odio at, blandit dictum nisi. Morbi at mauris sed nisi pretium interdum. Donec id lectus est.                                 
+                       </p>
+                       <p>    
+                           Donec sit amet sagittis leo, at sagittis tellus. In velit nulla, iaculis in lacinia sed, viverra vel turpis. Cras est magna, feugiat quis finibus at, u
+                       </p>
+                       <p>
+                           Mauris nec libero ex. Fusce tempus posuere quam, ac elementum libero ultrices vel. Curabitur vitae orci sit amet ipsum convallis hendrerit. Quisque interdum at dolor a laoreet. Curabitur enim dolor, congue nec est eget, elementum vulputate purus. Etiam vehicula, ipsum id rhoncus dictum, lectus dolor pulvinar magna, commodo feugiat nunc dolor vel elit. Nulla a nibh sit amet elit gravida lacinia non ut massa.                           
+                       </p>
+                       
+                       <img src= "http://lucerosalon.com/wp-content/themes/zencoder/images/services.jpg" class="img-thumbnail responsive">
+                       
+                  </div><!--konec modal body-->
+                                    
+                  
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+                  </div>
+                  
+              </div><!--konec modal kontent-->
+          </div><!--konec modal-dialog-->
+      </div><!--konec modal modal-fade-->
+          
        
   </body>
 </html>
